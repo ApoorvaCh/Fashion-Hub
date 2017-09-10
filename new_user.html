@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<title> Fashion hub online shopping </title>
+<link rel="stylesheet" href="app.css"/>
+<link rel="icon" href="https://t3.ftcdn.net/jpg/01/20/70/90/240_F_120709099_D2ndB2zLjwCcjrnUHjQQx1pdDhqCvI8y.jpg"/>
+
+<!-- meta elements-->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+<meta name="description" content="online shopping"/>
+<meta name="keywords" content="kids wear, mens wear,sarees,western dresses,traditional wear"/>
+<meta name="author" content=" "/>
+
+</head>
+
+
+<body>
+<div class="top_portion">
+<!-- top right elements-->
+<ul class="top_right">
+<li><a href="login.html">Log In</a></li>
+<li><a href="new_user.html"> <span style="font-size:23px;">New User</span></a></li>
+</ul>
+
+<br>
+
+<!--title of the page-->
+<h1><a href="app.html"><img src="hf.jpg" width="50" height="50"/></a>Fashion Hub</h1><br>
+</div>
+<br/>
+<br/>
+<div class="signup">
+
+<form name="newUser" onsubmit="return validateform()">
+First Name:<br/>
+<input type="text" name="firstname"/><p id="first" style="color:red;"></p>
+
+Last Name:<br/>
+<input type="text" name="lastname"/><p id="last" style="color:red;"></p>
+
+E-mail:<br/>
+<input type="email" name="email"/><p id="mail" style="color:red;"></p>
+
+Password:<br/>
+<input type="password" name="password"/><p id="pass" style="color:red;"></p>
+
+Re-enter Password:<br/>
+<input type="password" name="re_password"/><p id="repass" style="color:red;"></p>
+
+<input type="submit" value="submit" />;
+</form>
+<p id="demo"></p>
+</div>
+
+<script type="text/javascript">
+function validateform(){
+var fName=document.newUser.firstname.value, 
+lName=document.newUser.lastname.value, 
+mailId=document.newUser.email.value,
+ password=document.newUser.password.value, 
+ repassword=document.newUser.re_password.value;
+var x=false;
+if(fName==""){
+document.getElementById("first").innerHTML="please enter your first name";
+x=false;
+}
+if(lName==""){
+document.getElementById("last").innerHTML="please enter your last name";
+x=false;
+}
+if(mailId==""){
+document.getElementById("mail").innerHTML="please enter your E-mail Id";
+x=false;
+}
+if(password.length<6){
+document.getElementById("pass").innerHTML="password should have atleast 6 characters";
+x=false;
+}
+if(password!=repassword){
+document.getElementById("repass").innerHTML="password must be same";
+}
+return x;
+}
+</script>
+
+</body>
